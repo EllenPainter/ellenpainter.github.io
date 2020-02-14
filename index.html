@@ -14,25 +14,22 @@
 	<h1>Paintings </h1>
 	
 	<div style = "text-align: center; margin: 0 auto; width: 50%">
-		<img src="/images/bamboo.jpg">
-		<img src="/images/lillies.jpg">
-		<img src="/images/bouquet.jpg">
-		<img src="/images/bamboo2.jpg">
-		<img src="/images/branch.jpg">
-		<img src="/images/cliff.jpg">
-		<img src="/images/cliff2.jpg">
-		<img src="/images/flower.jpg">
-		<img src="/images/flower2.jpg">
-		<img src="/images/insect.jpg">
-		<img src="/images/lillies2.jpg">
-		<img src="/images/man.jpg">
-		<img src="/images/mountain.jpg">
-		<img src="/images/mountain2.jpg">
-		<img src="/images/petals.jpg">
-		<img src="/images/plum.jpg">
-		<img src="/images/town.jpg">
-		<img src="/images/water.jpg">
 	</div>
+	
+	<script>
+		var folder = "images/";
+
+		$.ajax({
+    			url : folder,
+    			success: function (data) {
+        			$(data).find("a").attr("href", function (i, val) {
+            				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                				$("body").append( "<img src='"+ folder + val +"'>" );
+           		 		} 
+        			});
+    			}
+		});
+	</script>
 	 
 </body>
 </html>
