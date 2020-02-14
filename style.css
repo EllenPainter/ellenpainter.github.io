@@ -21,6 +21,7 @@ p {
 img {
   max-width: 25%;
   height: auto;
+  display: inline-block;  
 }
 header {
     position: fixed;
