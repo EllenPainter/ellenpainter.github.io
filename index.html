@@ -4,6 +4,20 @@
 	<link rel="stylesheet" href="/style.css">
 	<title>Ellen He</title>
 </head>
+<script>
+	var folder = "/images/";
+
+	$.ajax({
+    		url : folder,
+    		success: function (data) {
+        		$(data).find("a").attr("href", function (i, val) {
+            			if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                			$("body").append( "<img src='"+ folder + val +"'>" );
+           		 	} 
+        		});
+    		}
+	});
+</script>
 <body>
 	<header>
 	    Ellen He
@@ -15,21 +29,6 @@
 	
 	<div style = "text-align: center; margin: 0 auto; width: 50%">
 	</div>
-	
-	<script>
-		var folder = "/images/";
-
-		$.ajax({
-    			url : folder,
-    			success: function (data) {
-        			$(data).find("a").attr("href", function (i, val) {
-            				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                				$("body").append( "<img src='"+ folder + val +"'>" );
-           		 		} 
-        			});
-    			}
-		});
-	</script>
 	 
 </body>
 </html>
