@@ -1,0 +1,15 @@
+body {
+    background-color: lightblue;
+}
+header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(46, 46, 46);
+    font-family: Times;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    padding: 1px;
+}
