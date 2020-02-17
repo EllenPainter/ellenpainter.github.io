@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="/style.css">
 	<title>Ellen He</title>
 </head>
-<body>
+<body onload="loadImages()">
 	<header> Ellen He </header>
 	
 	<br> 
@@ -72,7 +72,16 @@
 		<a href="https://ellenpainter.github.io/images/water.jpg" title="Water">
 			<img src="/images/water.jpg"> </a> <!-- 2048 x 2040 -->
 	</div>
-
+	<script>
+		function loadImages() {
+			var images = ["bamboo", "bamboo2", "bouquet", "branch", "cliff", "cliff2",
+				      "flower", "flower2", "flower3", "flower4", "insect", "lillies",
+				      "lillies2", "man", "mountain", "mountain2", "petals", "plum", 
+				      "town", "water"];
+			for (i = 0; i < images.length; i++) 
+				console.log(images[i]);
+		}
+	</script>
 </body>
 </html>
 
