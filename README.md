@@ -1,3 +1,3 @@
-Ellen He's Paintings
+<b> Ellen He's Paintings </b>
 
 https://ellenpainter.github.io/
