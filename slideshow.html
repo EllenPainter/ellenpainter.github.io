@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/style.css">
+	<title>Ellen He</title>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	
+	<script>
+		function loadImages() {
+			var images = ["bamboo", "bamboo2", "bouquet", "branch", "cliff", "cliff2",
+				      "flower", "flower2", "flower3", "flower4", "insect", "lillies",
+				      "lillies2", "man", "mountain", "mountain2", "petals", "plum", 
+				      "town", "water"];
+			for (i = 0; i < images.length; i++) {
+				document.getElementById("gallery").innerHTML += 
+					"<a href = 'https://ellenpainter.github.io/images/" + images[i] 
+					+ ".jpg' title='" + images[i] + "'> <img class='painting' src='/images/" + images[i] + ".jpg'> </a>"
+			}
+		}
+		myShow = w3.slideshow(".painting", 0);
+	</script>
+</head>
+<body onload="loadImages();">
+	<header> Ellen He </header>
+	
+	<br> 
+	
+	<h1 style="color:white;"> Introduction </h1>
+
+	<div style="text-align:center; margin:0 auto; width:100%" id="gallery">
+		
+	</div>
+	
+	<button onclick="myShow.previous()">Previous</button>
+	<button onclick="myShow.next()">Next</button>
+	
+</body>
+</html>
+
+
+<!-- comment -->
