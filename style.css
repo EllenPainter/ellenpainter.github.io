@@ -19,8 +19,8 @@ p {
     font-size: 100%;
 }
 img {
-  max-width:200px;
-  height: auto;
+  max-height:20%;
+  width: auto;
   display: inline-block;  
 }
 header {
