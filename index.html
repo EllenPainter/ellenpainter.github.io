@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" href="/style.css">
 	<title>Ellen He</title>
+	<script src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
 	<header> Ellen He </header>
@@ -12,66 +13,89 @@
 	<h1 style="color:white;"> Introduction </h1>
 	
 	<div style = "text-align: center; margin: 0 auto; width: 100%">
-		<a href="https://ellenpainter.github.io/images/bamboo.jpg">
+		<a href="https://ellenpainter.github.io/images/bamboo.jpg" title="Bamboo">
 			<img src="/images/bamboo.jpg"> </a> <!-- 1600 x 3390 -->
 		
-		<a href="https://ellenpainter.github.io/images/bamboo2.jpg">
+		<a href="https://ellenpainter.github.io/images/bamboo2.jpg" title="Bamboo2">
 			<img src="/images/bamboo2.jpg"> </a> <!-- 1078 x 1618 -->
 		
-		<a href="https://ellenpainter.github.io/images/bouquet.jpg">
+		<a href="https://ellenpainter.github.io/images/bouquet.jpg" title="Bouquet">
 			<img src="/images/bouquet.jpg"> </a> <!-- 1913 x 3893 -->
 		
-		<a href="https://ellenpainter.github.io/images/branch.jpg">
+		<a href="https://ellenpainter.github.io/images/branch.jpg" title="Branch">
 			<img src="/images/branch.jpg"> </a> <!-- 2027 x 2046 -->
 		
-		<a href="https://ellenpainter.github.io/images/cliff.jpg">
+		<a href="https://ellenpainter.github.io/images/cliff.jpg" title="Cliff">
 			<img src="/images/cliff.jpg"> </a> <!-- 1698 x 3569 -->
 		
-		<a href="https://ellenpainter.github.io/images/cliff2.jpg">
+		<a href="https://ellenpainter.github.io/images/cliff2.jpg" title="Cliff2">
 			<img src="/images/cliff2.jpg"> </a> <!-- 4032 x 3024 -->
 		
-		<a href="https://ellenpainter.github.io/images/flower.jpg">
+		<a href="https://ellenpainter.github.io/images/flower.jpg" title="Flower">
 			<img src="/images/flower.jpg"> </a> <!-- 2484 x 2432 -->
 		
-		<a href="https://ellenpainter.github.io/images/flower2.jpg">
+		<a href="https://ellenpainter.github.io/images/flower2.jpg" title="Flower2">
 			<img src="/images/flower2.jpg"> </a> <!-- 2325 x 3955 -->
 		
-		<a href="https://ellenpainter.github.io/images/flower3.jpg">
+		<a href="https://ellenpainter.github.io/images/flower3.jpg" title="Flower3">
 			<img src="/images/flower3.jpg"> </a> <!-- 2736 x 2764 -->
 		
-		<a href="https://ellenpainter.github.io/images/flower4.jpg">
+		<a href="https://ellenpainter.github.io/images/flower4.jpg" title="Flower4">
 			<img src="/images/flower4.jpg"> </a> <!-- 2048 x 1627 -->
 		
-		<a href="https://ellenpainter.github.io/images/insect.jpg">
+		<a href="https://ellenpainter.github.io/images/insect.jpg" title="Insect">
 			<img src="/images/insect.jpg"> </a> <!-- 1618 x 1078 -->
 			
-		<a href="https://ellenpainter.github.io/images/lillies.jpg">
+		<a href="https://ellenpainter.github.io/images/lillies.jpg" title="Lillies">
 			<img src="/images/lillies.jpg"> </a> <!-- 1928 x 3520 -->
 			
-		<a href="https://ellenpainter.github.io/images/lillies2.jpg">
+		<a href="https://ellenpainter.github.io/images/lillies2.jpg" title="Lillies2">
 			<img src="/images/lillies2.jpg"> </a> <!-- 2572 x 2678 -->
 		
-		<a href="https://ellenpainter.github.io/images/man.jpg">
+		<a href="https://ellenpainter.github.io/images/man.jpg" title="Man">
 			<img src="/images/man.jpg"> </a> <!-- 3024 x 4032 -->
 		
-		<a href="https://ellenpainter.github.io/images/mountain.jpg">
+		<a href="https://ellenpainter.github.io/images/mountain.jpg" title="Mountain">
 			<img src="/images/mountain.jpg"> </a> <!-- 747 x 341 -->
 		
-		<a href="https://ellenpainter.github.io/images/mountain2.jpg">
+		<a href="https://ellenpainter.github.io/images/mountain2.jpg" title="Mountain2">
 			<img src="/images/mountain2.jpg"> </a> <!-- 1600 x 1604 -->
 		
-		<a href="https://ellenpainter.github.io/images/petals.jpg">
+		<a href="https://ellenpainter.github.io/images/petals.jpg" title="Petals">
 			<img src="/images/petals.jpg"> </a> <!-- 1954 x 3848 -->
 		
-		<a href="https://ellenpainter.github.io/images/plum.jpg">
+		<a href="https://ellenpainter.github.io/images/plum.jpg" title="Plum">
 			<img src="/images/plum.jpg"> </a> <!-- 1078 x 2012 -->
 		
-		<a href="https://ellenpainter.github.io/images/town.jpg">
+		<a href="https://ellenpainter.github.io/images/town.jpg" title="Town">
 			<img src="/images/town.jpg"> </a> <!-- 4032 x 2132 -->
 		
-		<a href="https://ellenpainter.github.io/images/water.jpg">
+		<a href="https://ellenpainter.github.io/images/water.jpg" title="Water">
 			<img src="/images/water.jpg"> </a> <!-- 2048 x 2040 -->
 	</div>
+	
+	<script>
+		// https://dimsemenov.com/plugins/magnific-popup/ //
+		$(document).ready(function() {
+			$('.popup-gallery').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				tLoading: 'Loading image #%curr%...',
+				mainClass: 'mfp-img-mobile',
+				gallery: {
+					enabled: true,
+					navigateByImgClick: true,
+					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+				},
+				image: {
+					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					titleSrc: function(item) {
+						return item.el.attr('title') + '<small>by Ellen He</small>';
+					}
+				}
+			});
+		});
+	</script>
 	 
 </body>
 </html>
