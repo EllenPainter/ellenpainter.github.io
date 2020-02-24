@@ -44,11 +44,15 @@
 				//	"<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" 
 				//	+ "<a href='/images/" + images[i] + ".jpg' data-caption='' data-width='" + imgDimensions[i][0] +"' data-height='" + imgDimensions[i][1] 
 				//	+ "' itemprop='contentUrl'> <img src='/images/" + images[i]+ ".jpg' itemprop='thumbnail' alt='Image description'> </a> </figure>";
+				document.getElementById("gallery").innerHTML +=
+					"<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'> +
+					"<a href='/images/bamboo.jpg' data-caption='Painting<br><em class='text-muted'>by Ellen He</em>' data-width='1600' data-height='3390' itemprop='contentUrl'> +
+					"<img src='/images/bamboo.jpg' itemprop='thumbnail' alt='Image description'> </a> </figure>"
 			}
 		}
 </script>
 </head>
-<body>
+<body onload="loadImages();">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
