@@ -2,6 +2,7 @@
 
 https://ellenpainter.github.io/
 
+Using HTML, CSS, JavaScript, and PhotoSwipe Library
 
 Contact: ellenhepainter@gmail.com
 
