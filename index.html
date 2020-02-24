@@ -33,8 +33,13 @@
 		};
 
 		// Initializes and opens PhotoSwipe
-		var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-		gallery.init();
+		require([ 
+        'photoswipe/photoswipe.js', 
+        'photoswipe/photoswipe-ui-default.js' 
+		], function( PhotoSwipe, PhotoSwipeUI_Default ) { ...
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+		});
 		/*
 		function loadImages() {
 			var images = ["bamboo", "bamboo2", "bouquet", "branch", "cliff", "cliff2",
