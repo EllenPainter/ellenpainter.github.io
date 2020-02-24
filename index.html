@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <title>Ellen He</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
   <!-- Import PhotoSwipe Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
-
   <!-- A touch of fanciness 💄 -->
   <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
   <style>
@@ -20,12 +18,7 @@
       width: 33.333%;
       float: left;
     }
-    img {
-      width:400px;
-      height:400px;
-      object-fit:cover;
-      display: inline-block;  
-    }
+    img {width: 100%;}
     .spacer {height: 5em;}
   </style>
   <script>
@@ -53,16 +46,14 @@
           Iceland<br>
           <small><em>a PhotoSwipe Demo</em></small>
         </h1>
-
         <!-- Galley wrapper that contains all items -->
         <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
           <!-- Use figure for a more semantic html -->
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-            <a href="/images/bamboo.jpg" data-caption="Ellen He Painting" data-width="400" data-height="400" itemprop="contentUrl">
+            <a href="https://unsplash.it/1200/900/?image=702" data-caption="Sea side, south shore<br><em class='text-muted'>© Dominik Schröder</em>" data-width="1200" data-height="900" itemprop="contentUrl">
               <!-- Thumbnail -->
-              <img src="/images/bamboo.jpg" itemprop="thumbnail" alt="Image description">
+              <img src="https://unsplash.it/400/300/?image=702" itemprop="thumbnail" alt="Image description">
             </a>
           </figure>
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -121,15 +112,11 @@
             </a>
           </figure>
         </div>
-
       </div>
     </div>
   </div>
-
   <!-- Some spacing 😉 -->
   <div class="spacer"></div>
-
-
   <!-- Root element of PhotoSwipe. Must have class pswp. -->
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <!-- Background of PhotoSwipe. 
@@ -177,22 +164,16 @@
           </div>
       </div>
   </div>
-
   <!-- Import jQuery and PhotoSwipe Scripts -->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
-
   <script>
     'use strict';
-
     /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
-
     (function($){
-
       // Init empty gallery array
       var container = [];
-
       // Loop over gallery items and push it to the array
       $('#gallery').find('figure').each(function(){
         var $link = $(this).find('a'),
@@ -204,13 +185,10 @@
             };
         container.push(item);
       });
-
       // Define click event on gallery item
       $('a').click(function(event){
-
         // Prevent location change
         event.preventDefault();
-
         // Define object and gallery options
         var $pswp = $('.pswp')[0],
             options = {
@@ -218,12 +196,10 @@
               bgOpacity: 0.85,
               showHideOpacity: true
             };
-
         // Initialize PhotoSwipe
         var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
         gallery.init();
       });
-
     }(jQuery));
   </script>
 </body>
