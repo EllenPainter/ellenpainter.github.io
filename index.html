@@ -23,8 +23,21 @@
     img {width: 100%;}
     .spacer {height: 5em;}
   </style>
+  <script>
+		function loadImages() {
+			var images = ["bamboo", "bamboo2", "bouquet", "branch", "cliff", "cliff2",
+				      "flower", "flower2", "flower3", "flower4", "insect", "lillies",
+				      "lillies2", "man", "mountain", "mountain2", "petals", "plum", 
+				      "town", "water"];
+			for (i = 0; i < images.length; i++) {
+				document.getElementById("gallery").innerHTML += 
+					"<a href = 'https://ellenpainter.github.io/images/" + images[i] 
+					+ ".jpg' title='" + images[i] + "'> <img src='/images/" + images[i] + ".jpg'> </a>"
+			}
+		}
+	</script>
 </head>
-<body >
+<body onload="loadImages();">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
@@ -45,7 +58,6 @@
               <img src="https://unsplash.it/400/300/?image=702" itemprop="thumbnail" alt="Image description">
             </a>
           </figure>
-
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="https://unsplash.it/1200/900/?image=695" data-caption="Sunset in the wheat field<br><em class='text-muted'>© Jordan McQueen</em>" data-width="1200" data-height="900" itemprop="contentUrl">
               <img src="https://unsplash.it/400/300/?image=695" itemprop="thumbnail" alt="Image description">
