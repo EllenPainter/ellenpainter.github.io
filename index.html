@@ -26,29 +26,9 @@
     }
     .spacer {height: 5em;}
   </style>
-  <script>
-		function loadImages() {
-			var images = ["bamboo", "bamboo2", "bouquet", "branch", "cliff", "cliff2",
-				      "flower", "flower2", "flower3", "flower4", "insect", "lillies",
-				      "lillies2", "man", "mountain", "mountain2", "petals", "plum", 
-				      "town", "water"];
-			var imgDimensions = [
-				[1600, 3390], [1078, 1618], [1913, 3893], [2027, 2046], [1698, 3569], [4032, 3024],
-				[2484, 2432], [2325, 3955], [2736, 2764], [2048, 1627], [1618, 1078], [1928, 3520],
-				[2572, 2678], [3024, 4032], [747, 341], [1600, 1604], [1954, 3848], [1078, 2012],
-				[4032, 2132], [2048, 2040]
-			];
-			for (i = 0; i < images.length; i++) {
-				console.log(images[i] + " " + imgDimensions[i][0] + "," + imgDimensions[i][1]);
-				//document.getElementById("gallery").innerHTML += 
-				//	"<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" 
-				//	+ "<a href='/images/" + images[i] + ".jpg' data-caption='' data-width='" + imgDimensions[i][0] +"' data-height='" + imgDimensions[i][1] 
-				//	+ "' itemprop='contentUrl'> <img src='/images/" + images[i]+ ".jpg' itemprop='thumbnail' alt='Image description'> </a> </figure>";
-			}
-		}
-	</script>
+  
 </head>
-<body onload="loadImages();">
+<body>
   <div class="container">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
@@ -120,6 +100,27 @@
             </a>
           </figure>
         </div>
+	<script>
+		function loadImages() {
+			var images = ["bamboo", "bamboo2", "bouquet", "branch", "cliff", "cliff2",
+				      "flower", "flower2", "flower3", "flower4", "insect", "lillies",
+				      "lillies2", "man", "mountain", "mountain2", "petals", "plum", 
+				      "town", "water"];
+			var imgDimensions = [
+				[1600, 3390], [1078, 1618], [1913, 3893], [2027, 2046], [1698, 3569], [4032, 3024],
+				[2484, 2432], [2325, 3955], [2736, 2764], [2048, 1627], [1618, 1078], [1928, 3520],
+				[2572, 2678], [3024, 4032], [747, 341], [1600, 1604], [1954, 3848], [1078, 2012],
+				[4032, 2132], [2048, 2040]
+			];
+			for (i = 0; i < images.length; i++) {
+				console.log(images[i] + " " + imgDimensions[i][0] + "," + imgDimensions[i][1]);
+				document.getElementById("gallery").innerHTML += 
+					"<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" 
+					+ "<a href='/images/" + images[i] + ".jpg' data-caption='' data-width='" + imgDimensions[i][0] +"' data-height='" + imgDimensions[i][1] 
+					+ "' itemprop='contentUrl'> <img src='/images/" + images[i]+ ".jpg' itemprop='thumbnail' alt='Image description'> </a> </figure>";
+			}
+		}
+	</script>
       </div>
     </div>
   </div>
