@@ -31,8 +31,9 @@
 				      "town", "water"];
 			for (i = 0; i < images.length; i++) {
 				document.getElementById("gallery").innerHTML += 
-					"<a href = 'https://ellenpainter.github.io/images/" + images[i] 
-					+ ".jpg' title='" + images[i] + "'> <img src='/images/" + images[i] + ".jpg'> </a>"
+					"<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'> 
+					+ "<a href='/images/" + images[i] + ".jpg' data-caption='' data-width='1200' data-height='900' itemprop='contentUrl'>"
+					+ "<img src='/images/" + images[i]+ ".jpg' itemprop='thumbnail' alt='Image description'> </a> </figure>";
 			}
 		}
 	</script>
