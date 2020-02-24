@@ -29,12 +29,6 @@
 				      "flower", "flower2", "flower3", "flower4", "insect", "lillies",
 				      "lillies2", "man", "mountain", "mountain2", "petals", "plum", 
 				      "town", "water"];
-			for (i = 0; i < images.length; i++) {
-				document.getElementById("gallery").innerHTML += 
-					"<figure itemprop='associatedMedia' itemscope itemtype='http://schema.org/ImageObject'>" 
-					+ "<a href='/images/" + images[i] + ".jpg' data-caption='' data-width='1200' data-height='900' itemprop='contentUrl'>"
-					+ "<img src='/images/" + images[i]+ ".jpg' itemprop='thumbnail' alt='Image description'> </a> </figure>";
-			}
 		}
 	</script>
 </head>
