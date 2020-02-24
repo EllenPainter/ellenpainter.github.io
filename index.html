@@ -36,9 +36,11 @@
 		require([ 
         'photoswipe/photoswipe.js', 
         'photoswipe/photoswipe-ui-default.js' 
-		], function( PhotoSwipe, PhotoSwipeUI_Default ) { ...
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
+		], function( PhotoSwipe, PhotoSwipeUI_Default ) {
+
+			var gallery = new PhotoSwipe( someElement, PhotoSwipeUI_Default 
+			gallery.init() 
+
 		});
 		/*
 		function loadImages() {
