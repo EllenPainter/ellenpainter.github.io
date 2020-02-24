@@ -20,7 +20,12 @@
       width: 33.333%;
       float: left;
     }
-    img {width: 100%;}
+    img {
+      width:400px;
+      height:400px;
+      object-fit:cover;
+      display: inline-block;  
+    }
     .spacer {height: 5em;}
   </style>
   <script>
@@ -55,7 +60,7 @@
           <!-- Use figure for a more semantic html -->
           <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-            <a href="/images/bamboo.jpg" data-caption="Ellen He Painting" data-width="1200" data-height="900" itemprop="contentUrl">
+            <a href="/images/bamboo.jpg" data-caption="Ellen He Painting" data-width="400" data-height="400" itemprop="contentUrl">
               <!-- Thumbnail -->
               <img src="/images/bamboo.jpg" itemprop="thumbnail" alt="Image description">
             </a>
